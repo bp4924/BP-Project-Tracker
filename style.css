@@ -31,3 +31,15 @@ header {
 #timeDisplay {
   font-size: 2.5rem;
 }
+
+aside {
+  display: flex;
+  flex-direction: column;
+  max-width: 25rem;
+}
+
+.btn {
+  background-color: var(--text);
+  color: var(--dark);
+  font-weight: 700;
+}
