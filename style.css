@@ -1,0 +1,33 @@
+:root {
+  background-color: azure;
+  --dark: rgb(58, 20, 20);
+  --text: rgb(220, 175, 175);
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-height: 10rem;
+  background-color: var(--dark);
+  color: var(--text);
+  padding: 1rem;
+}
+
+#timeDisplay {
+  font-size: 2.5rem;
+}
