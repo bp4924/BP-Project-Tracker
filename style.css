@@ -32,14 +32,37 @@ header {
   font-size: 2.5rem;
 }
 
-aside {
+.card {
   display: flex;
   flex-direction: column;
-  max-width: 25rem;
+  max-width: 12rem;
+  font-weight: 700;
+}
+
+.card button {
+  align-items: center;
 }
 
 .btn {
   background-color: var(--text);
   color: var(--dark);
   font-weight: 700;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.modal-form * {
+  margin: 0.1rem;
+  width: 45%;
+  min-width: 12rem;
+  height: 2.1rem;
+}
+
+.modal-footer {
+  background-color: aliceblue;
 }
