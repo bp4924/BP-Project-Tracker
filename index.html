@@ -22,14 +22,22 @@
     </header>
 
     <aside class="modal-call-buttons">
-      <button
-        type="button"
-        class="btn btn-info btn-lg"
-        data-toggle="modal"
-        data-target="#myModalAdd"
-      >
-        Add Project
-      </button>
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">New project</h4>
+          <p class="card-text">
+            Complete the following form to add a new project to the list.
+          </p>
+          <button
+            type="button"
+            class="btn btn-info btn-lg"
+            data-toggle="modal"
+            data-target="#myModalAdd"
+          >
+            Add Project
+          </button>
+        </div>
+      </div>
       <button
         type="button"
         class="btn btn-info btn-lg"
@@ -41,7 +49,7 @@
 
       <!-- Modal -->
       <div id="myModalAdd" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-sm">
           <!-- Modal content-->
           <div class="modal-content">
             <div class="modal-header">
@@ -52,19 +60,56 @@
             </div>
             <div class="modal-body">
               <p>Complete the form to add a new project</p>
+              <div class="modal-form">
+                <input
+                  type="text"
+                  class="project-name"
+                  placeholder="Project Name"
+                />
+                <!-- drop-down-->
+                <select
+                  name="dropdown"
+                  class="project-type"
+                  placeholder="Select Project Type"
+                >
+                  <option value="Front-end" selected>Front-end</option>
+                  <option value="Back-end">Server-side</option>
+                  <option value="Full-stack">Full-stack</option>
+                </select>
+                <input
+                  type="text"
+                  class="project-rate"
+                  placeholder="Hourly Rate"
+                />
+                <!-- date picker-->
+                <input
+                  type="text"
+                  class="form-control"
+                  data-provide="datepicker"
+                />
+              </div>
             </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-default btn-clear"
+              data-dismiss="modal"
+            >
+              Clear Form
+            </button>
+            <button
+              type="button"
+              class="btn btn-default btn-save"
+              data-dismiss="modal"
+            >
+              Save
+            </button>
           </div>
         </div>
       </div>
+
       <div id="myModalRemove" class="modal fade" role="dialog">
         <div class="modal-dialog">
           <!-- Modal content-->
