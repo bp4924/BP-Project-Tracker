@@ -2,11 +2,13 @@
   background-color: azure;
   --dark: rgb(58, 20, 20);
   --text: rgb(220, 175, 175);
+  --light: rgb(253, 217, 217);
   font-size: 62.5%;
 }
 
 body {
   font-weight: 500;
+  background-color: var(--text);
 }
 
 h1 {
@@ -17,7 +19,8 @@ h2 {
   font-size: 2.5rem;
 }
 
-header {
+/* header and time display */
+.hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,6 +35,7 @@ header {
   font-size: 2.5rem;
 }
 
+/* new project card */
 .card {
   display: flex;
   flex-direction: column;
@@ -47,6 +51,11 @@ header {
   background-color: var(--text);
   color: var(--dark);
   font-weight: 700;
+}
+
+/* modal*/
+.modal-call-buttons {
+  max-width: 12rem;
 }
 
 .modal-form {
@@ -65,4 +74,27 @@ header {
 
 .modal-footer {
   background-color: aliceblue;
+}
+
+/* main */
+main {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4rem;
+}
+
+/*table */
+.table-header {
+  font-size: 1.8rem;
+  background-color: var(--dark);
+  color: var(--text);
+  border: 0.1rem solid var(--dark);
+}
+
+#col-labels td {
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: 0.1rem solid var(--dark);
+  background-color: var(--text);
+  color: var(--dark);
 }

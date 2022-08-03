@@ -20,122 +20,145 @@
       <h1 class="hero-title">Project Tracker</h1>
       <div id="timeDisplay">..</div>
     </header>
+    <main class="table">
+      <aside class="modal-call-buttons">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">New project</h4>
+            <p class="card-text">
+              Complete the following form to add a new project to the list.
+            </p>
+            <button
+              type="button"
+              class="btn btn-info btn-lg"
+              data-toggle="modal"
+              data-target="#myModalAdd"
+            >
+              Add Project
+            </button>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="btn btn-info btn-lg"
+          data-toggle="modal"
+          data-target="#myModalRemove"
+        >
+          Remove Project
+        </button>
+      </aside>
+      <table>
+        <thead class="table-header">
+          <tr>
+            <th colspan="6">Project Due List</th>
+          </tr>
+          <tr id="col-labels">
+            <td>Project Name</td>
+            <td>Project Type</td>
+            <td>Hourly Rate</td>
+            <td>Due Date</td>
+            <td>Days Until Due</td>
+            <td>Projected Earnings</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="project1">
+            <td>Third Party API</td>
+            <td>Front-end</td>
+            <td>$50</td>
+            <td>08/08/2022</td>
+            <td>5</td>
+            <td>$2000</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <!-- Modal -->
+    <div id="myModalAdd" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Add a new project</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Complete the form to add a new project</p>
+            <div class="modal-form">
+              <input
+                type="text"
+                class="project-name"
+                placeholder="Project Name"
+              />
+              <!-- drop-down-->
+              <select
+                name="dropdown"
+                class="project-type"
+                placeholder="Select Project Type"
+              >
+                <option value="Front-end" selected>Front-end</option>
+                <option value="Back-end">Server-side</option>
+                <option value="Full-stack">Full-stack</option>
+              </select>
+              <input
+                type="text"
+                class="project-rate"
+                placeholder="Hourly Rate"
+              />
+              <!-- date picker-->
+              <input
+                type="text"
+                class="project-date"
+                placeholder="08/03/2022"
+                data-provide="datepicker"
+              />
+            </div>
+          </div>
+        </div>
 
-    <aside class="modal-call-buttons">
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title">New project</h4>
-          <p class="card-text">
-            Complete the following form to add a new project to the list.
-          </p>
+        <div class="modal-footer">
           <button
             type="button"
-            class="btn btn-info btn-lg"
-            data-toggle="modal"
-            data-target="#myModalAdd"
+            class="btn btn-default btn-clear"
+            data-dismiss="modal"
           >
-            Add Project
+            Clear Form
+          </button>
+          <button
+            type="button"
+            class="btn btn-default btn-save"
+            data-dismiss="modal"
+          >
+            Save
           </button>
         </div>
       </div>
-      <button
-        type="button"
-        class="btn btn-info btn-lg"
-        data-toggle="modal"
-        data-target="#myModalRemove"
-      >
-        Remove Project
-      </button>
+    </div>
 
-      <!-- Modal -->
-      <div id="myModalAdd" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-sm">
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Add a new project</h4>
-              <button type="button" class="close" data-dismiss="modal">
-                &times;
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>Complete the form to add a new project</p>
-              <div class="modal-form">
-                <input
-                  type="text"
-                  class="project-name"
-                  placeholder="Project Name"
-                />
-                <!-- drop-down-->
-                <select
-                  name="dropdown"
-                  class="project-type"
-                  placeholder="Select Project Type"
-                >
-                  <option value="Front-end" selected>Front-end</option>
-                  <option value="Back-end">Server-side</option>
-                  <option value="Full-stack">Full-stack</option>
-                </select>
-                <input
-                  type="text"
-                  class="project-rate"
-                  placeholder="Hourly Rate"
-                />
-                <!-- date picker-->
-                <input
-                  type="date"
-                  class="form-control"
-                  data-provide="datepicker"
-                />
-              </div>
-            </div>
+    <div id="myModalRemove" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Remove a project</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
           </div>
-
+          <div class="modal-body">
+            <p>Complete the form to remove a project</p>
+          </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-default btn-clear"
-              data-dismiss="modal"
-            >
-              Clear Form
-            </button>
-            <button
-              type="button"
-              class="btn btn-default btn-save"
-              data-dismiss="modal"
-            >
-              Save
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Close
             </button>
           </div>
         </div>
       </div>
+    </div>
 
-      <div id="myModalRemove" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Remove a project</h4>
-              <button type="button" class="close" data-dismiss="modal">
-                &times;
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>Complete the form to remove a project</p>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </aside>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
