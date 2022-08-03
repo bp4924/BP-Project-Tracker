@@ -1,4 +1,8 @@
-const timeDisplay = $("#timeDisplay");
+const timeDisplayEl = $("#timeDisplay");
+const projectNameEl = $(".project-name");
+const projectTypeEl = $(".project-type");
+const projectRateEl = $(".project-rate");
+const projectDateEl = $(".project-date");
 
 let newTime;
 
